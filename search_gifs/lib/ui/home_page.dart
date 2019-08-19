@@ -1,8 +1,9 @@
 import 'dart:convert';
-
+import 'package:search_gifs/ui/gif_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:search_gifs/ui/gif_page.dart';
+
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,18 +12,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String _search;
-
   int _offset = 0;
+
 
   Future<Map> _getSearch() async {
     http.Response response;
 
     if (_search == null)
       response = await http.get(
-          "https://api.giphy.com/v1/gifs/trending?api_key=WWBtVmDsRyzFpPLLZ7ktyt7AFVgRwc5j&limit=20&rating=G");
+          "https://api.giphy.com/v1/gifs/trending?api_key=WWBtVmDsRyzFpPLLZ7ktyt7AFVgRwc5j&limit=19&offset=$_offset&rating=R");
     else
       response = await http.get(
-          "https://api.giphy.com/v1/gifs/search?api_key=WWBtVmDsRyzFpPLLZ7ktyt7AFVgRwc5j&q=$_search&limit=20&offset=$_offset&rating=G&lang=en");
+          "https://api.giphy.com/v1/gifs/search?api_key=WWBtVmDsRyzFpPLLZ7ktyt7AFVgRwc5j&q=$_search&limit=20&offset=$_offset&rating=G&lang=pt");
 
     return json.decode(response.body);
   }
@@ -40,19 +41,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.black54,
         title: Image.network(
             "https://developers.giphy.com/static/img/dev-logo-lg.7404c00322a8.gif"),
         centerTitle: true,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black12,
       body: Column(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.all(10.0),
             child: TextField(
               decoration: InputDecoration(
-                  labelText: "Pesquise Aqui!",
+                  labelText: "Pesquise Aqui...",
                   labelStyle: TextStyle(color: Colors.white),
                   border: OutlineInputBorder()),
               style: TextStyle(color: Colors.white, fontSize: 18.0),
@@ -110,10 +111,10 @@ class _HomePageState extends State<HomePage> {
           crossAxisCount: 2, crossAxisSpacing: 10.0, mainAxisSpacing: 10.0),
       itemCount: _getCount(snapshot.data["data"]),
       itemBuilder: (context, index) {
-        if (_search == null || index < snapshot.data["data"].legth)
+        if (_search == null || index < snapshot.data["data"].length) {
           return GestureDetector(
             child: Image.network(
-              snapshot.data["data"]["index"]["images"]["fixed_height"]["url"],
+              snapshot.data["data"][index]["images"]["fixed_height"]["url"],
               height: 300.0,
               fit: BoxFit.cover,
             ),
@@ -121,10 +122,10 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => GifPage(snapshot.data["index"])));
+                      builder: (context) => GifPage(snapshot.data["data"][index])));
             },
           );
-        else
+        }else
           return Container(
             child: GestureDetector(
               child: Column(
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     "Carregar mais...",
                     style: TextStyle(color: Colors.white, fontSize: 22.0),
-                  )
+                  ),
                 ],
               ),
               onTap: () {
