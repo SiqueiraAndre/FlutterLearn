@@ -25,19 +25,19 @@ Mantém o mesmo estado ao longo da aplicação, caso o pai seja stateless, não 
 
 # Apps Desenvolvidos e conceitos utilizados.
 
-- [contador_de_pessoa](https://github.com/thomaserick/flutter_studies/tree/master/contador_de_pessoa): MaterialApp, StatefulWidget, setState, adição de imagem do resources (asset), Image.asset, Text, TextStyle, FlatButton, Padding, Stack, Column, debugPrint, Container, EdgeInsets, Colors;
+- [people_counter](https://github.com/asiqueirabr/FlutterLearn/tree/master/people_counter): MaterialApp, StatefulWidget, setState, adição de imagem do resources (asset), Image.asset, Text, TextStyle, FlatButton, Padding, Stack, Column, debugPrint, Container, EdgeInsets, Colors;
 
-- [calculo_imc](https://github.com/thomaserick/flutter_studies/tree/master/calculo_imc) : TextEditingController, double.parse, .toStringAsPrecision, Scaffold, AppBar, IconButton, Icons, SingleChildScrollView, GlobalKey<FormState>, Form, TextFormField, TextInputType, RaisedButton, Column;
+- [calculator_imc](https://github.com/asiqueirabr/FlutterLearn/tree/master/calculator_imc) : TextEditingController, double.parse, .toStringAsPrecision, Scaffold, AppBar, IconButton, Icons, SingleChildScrollView, GlobalKey<FormState>, Form, TextFormField, TextInputType, RaisedButton, Column;
 
-- [conversor](https://github.com/thomaserick/flutter_studies/tree/master/conversor): async, FutureBuilder, Icon, Divider, Future, http, json, TextField, InputDecoration, OutlineInputBorder;
+- [currency_change](https://github.com/asiqueirabr/FlutterLearn/tree/master/currency_change): async, FutureBuilder, Icon, Divider, Future, http, json, TextField, InputDecoration, OutlineInputBorder;
 
-- [listaTarefas](https://github.com/thomaserick/flutter_studies/tree/master/listaTarefa): initState, getApplicationDocumentsDirectory, File, Future.delayed, Row, ListView, Expanded, Dismissible, DateTime, Align, CheckboxListTile, SnackBar, SnackBarAction, Duration;
+- [task_list](https://github.com/asiqueirabr/FlutterLearn/tree/master/task_list): initState, getApplicationDocumentsDirectory, File, Future.delayed, Row, ListView, Expanded, Dismissible, DateTime, Align, CheckboxListTile, SnackBar, SnackBarAction, Duration;
 
-- [api_giphy](https://github.com/thomaserick/flutter_studies/tree/master/api_giphy) : debugShowCheckedModeBanner, separação das telas por arquivos, Image.network, CircularProgressIndicator, AlwaysStoppedAnimation, Alignment, AsyncSnapshot, GridView, SliverGridDelegateWithFixedCrossAxisCount, GestureDetector, FadeInImage, kTransparentImage, BoxFit, Navigator, MaterialPageRoute, Share;
+- [search_gifs](https://github.com/asiqueirabr/flutter_studies/tree/master/search_gifs) : debugShowCheckedModeBanner, separação das telas por arquivos, Image.network, CircularProgressIndicator, AlwaysStoppedAnimation, Alignment, AsyncSnapshot, GridView, SliverGridDelegateWithFixedCrossAxisCount, GestureDetector, FadeInImage, kTransparentImage, BoxFit, Navigator, MaterialPageRoute, Share;
 
-- [agenda_contatos](https://github.com/thomaserick/flutter_studies/tree/master/agenda_contatos): enum, PopupMenuButton, PopupMenuEntry, PopupMenuItem, FloatingActionButton, Card, BoxDecoration, BoxShape, DecorationImage, FileImage, AssetImage, showModalBottomSheet, BottomSheet, FlatButton, Navigator, sort, FocusNode, WillPopScope, FocusScope, ImagePicker, ImageSource, FileImage, AssetImage, showDialog, AlertDialog, FlatButton, Future.value, singleton, Database, fromMap, toMap;
+- [schedule_contacts](https://github.com/asiqueirabr/flutter_studies/tree/master/schedule_contacts): enum, PopupMenuButton, PopupMenuEntry, PopupMenuItem, FloatingActionButton, Card, BoxDecoration, BoxShape, DecorationImage, FileImage, AssetImage, showModalBottomSheet, BottomSheet, FlatButton, Navigator, sort, FocusNode, WillPopScope, FocusScope, ImagePicker, ImageSource, FileImage, AssetImage, showDialog, AlertDialog, FlatButton, Future.value, singleton, Database, fromMap, toMap;
 
-- [chat_online](https://github.com/thomaserick/flutter_studies/tree/master/chat_online): ThemeData, GoogleSignIn, FirebaseAuth, GoogleSignInAccount, GoogleSignInAuthentication, Firestore, Theme.of(context).platform, SafeArea, StreamBuilder, CircularProgressIndicator, Divider, IconTheme, IconThemeData, IconButton, StorageUploadTask, FirebaseStorage, CupertinoButton, IconButton, CircleAvatar;
+- [chat_online](https://github.com/asiqueirabr/flutter_studies/tree/master/chat_online): ThemeData, GoogleSignIn, FirebaseAuth, GoogleSignInAccount, GoogleSignInAuthentication, Firestore, Theme.of(context).platform, SafeArea, StreamBuilder, CircularProgressIndicator, Divider, IconTheme, IconThemeData, IconButton, StorageUploadTask, FirebaseStorage, CupertinoButton, IconButton, CircleAvatar;
 
 <!-- <li>loja_virtual (Screenshots): Model, notifyListeners, ScopedModel, ScopedModelDescendant, Color.fromARGB, SizedBox, ExpansionTile, Expanded, CircleAvatar, InkWell (para dar o effeito de ripple), SliverAppBar, SliverStaggeredGrid, CustomScrollView, FadeInImage.memoryNetwork, NeverScrollableScrollPhysics, drawer, VoidCallback;
 
