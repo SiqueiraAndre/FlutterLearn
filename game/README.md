@@ -4,4 +4,4 @@ A new Flutter application.
 
 ## Getting Started
 
-Jogo desenvolvido nas aulas de Flutter mestrada pelo Prof. @carloscubas
+Jogo desenvolvido nas aulas de Flutter mestrada pelo - [Carlos Cubas](https://github.com/carloscubas) (Prof.)
